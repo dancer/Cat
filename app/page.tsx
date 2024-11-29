@@ -17,6 +17,7 @@ export default function Home() {
 
   const handleCopyEmail = (e: React.MouseEvent) => {
     e.preventDefault()
+    navigator.clipboard.writeText('support@nidal.ee')
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -108,24 +109,20 @@ export default function Home() {
             >
               KO-FI
             </Link>
-            <div className="relative">
-              <Link 
-                href="#"
-                onClick={handleCopyEmail}
-                className="text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors group flex items-center gap-1 md:gap-2"
-              >
-                CONTACT
-                {copied ? (
-                  <Check className="w-3 h-3 md:w-4 md:h-4 text-green-600" />
-                ) : (
-                  <Copy className="w-3 h-3 md:w-4 md:h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                )}
-              </Link>
-            </div>
+            <button 
+              onClick={handleCopyEmail}
+              className="text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors group flex items-center gap-1 md:gap-2"
+            >
+              CONTACT
+              {copied ? (
+                <Check className="w-3 h-3 md:w-4 md:h-4 text-green-600" />
+              ) : (
+                <Copy className="w-3 h-3 md:w-4 md:h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+              )}
+            </button>
           </nav>
         </div>
       </footer>
     </main>
   )
 }
-
