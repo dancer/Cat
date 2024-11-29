@@ -1,101 +1,131 @@
-import Image from "next/image";
+'use client'
+
+import Link from 'next/link'
+import { Righteous } from 'next/font/google'
+import { Copy, Check, Download } from 'lucide-react'
+import { useState, useEffect } from 'react'
+
+const righteous = Righteous({ 
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [copied, setCopied] = useState(false)
+  const [downloadText, setDownloadText] = useState('DOWNLOAD HERE')
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const handleCopyEmail = (e: React.MouseEvent) => {
+    e.preventDefault()
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDownloadText(prevText => 
+        prevText === 'DOWNLOAD HERE' ? 'DOWNLOAD_HERE' : 'DOWNLOAD HERE'
+      )
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [])
+
+  return (
+    <main className="min-h-screen bg-[#f5f5f5] flex flex-col">
+      {/* Top bar with decorative lines */}
+      <div className="w-full px-6 pt-6 flex items-center justify-between">
+        <div className="flex items-center gap-6">
+          <div className="text-xs tracking-wider text-neutral-500">v0.1.0</div>
+          <div className="w-12 h-[1px] bg-neutral-300"></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div className="text-xs tracking-wider text-neutral-500">UOU</div>
+        <div className="flex items-center gap-6">
+          <div className="w-12 h-[1px] bg-neutral-300"></div>
+          <div className="text-xs tracking-wider text-neutral-500">2024</div>
+        </div>
+      </div>
+
+      {/* Center content */}
+      <div className="flex-1 flex flex-col items-center justify-center -mt-20">
+        {/* Vertical line */}
+        <div className="w-[1px] h-24 bg-neutral-300 mb-16"></div>
+        
+        {/* Logo with mirror effect */}
+        <div className="text-center mb-16 relative">
+          <h1 className={`text-6xl text-[#ff4f4f] ${righteous.className}`}>
+            nidalee.
+          </h1>
+          <div 
+            className={`text-6xl text-[#ff4f4f] opacity-30 transform scale-y-[-1] absolute top-full left-0 right-0 overflow-hidden pt-1 ${righteous.className}`}
+            aria-hidden="true"
+          >
+            nidalee.
+          </div>
+        </div>
+
+        {/* Animated Download Button */}
+        <Link 
+          href="https://github.com/dancer/nidalee/releases/latest/download/Nidalee.exe"
+          className="group relative px-6 py-3 font-mono text-sm font-medium text-black bg-white rounded-md overflow-hidden transition-all duration-300 ease-out hover:bg-[#ff8f8f] hover:scale-110"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+          <span className="relative z-10 flex items-center gap-2">
+            <Download className="w-4 h-4" />
+            {downloadText}
+          </span>
+          <span className="absolute inset-0 z-0 bg-gradient-to-r from-[#ffcfcf] to-[#ff8f8f] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+          <span className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-[#ff4f4f] rounded-full blur-3xl"></span>
+          </span>
+        </Link>
+      </div>
+
+      {/* Navigation */}
+      <footer className="footer">
+        <div className="w-full flex flex-col items-center pb-4 mt-16 mb-safe">
+          <div className="w-full h-[1px] bg-neutral-300 mb-4"></div>
+          <nav className="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-16">
+            <Link 
+              href="https://github.com/dancer/nidalee" 
+              className="text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GITHUB
+            </Link>
+            <Link 
+              href="https://discord.gg/launcher" 
+              className="text-[10px] md:text-sm tracking-wider text-[#ff4f4f] hover:text-[#ff8f8f] transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              DISCORD
+            </Link>
+            <Link 
+              href="https://ko-fi.com/uoucat" 
+              className="text-[10px] md:text-sm tracking-wider text-[#ff4f4f] hover:text-[#ff8f8f] transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              KO-FI
+            </Link>
+            <div className="relative">
+              <Link 
+                href="#"
+                onClick={handleCopyEmail}
+                className="text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors group flex items-center gap-1 md:gap-2"
+              >
+                CONTACT
+                {copied ? (
+                  <Check className="w-3 h-3 md:w-4 md:h-4 text-green-600" />
+                ) : (
+                  <Copy className="w-3 h-3 md:w-4 md:h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                )}
+              </Link>
+            </div>
+          </nav>
+        </div>
       </footer>
-    </div>
-  );
+    </main>
+  )
 }
+
