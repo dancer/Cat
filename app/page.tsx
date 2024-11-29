@@ -15,11 +15,28 @@ export default function Home() {
   const [copied, setCopied] = useState(false)
   const [downloadText, setDownloadText] = useState('DOWNLOAD HERE')
 
-  const handleCopyEmail = (e: React.MouseEvent) => {
+  const handleCopyEmail = async (e: React.MouseEvent) => {
     e.preventDefault()
-    navigator.clipboard.writeText('support@nidal.ee')
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+    const email = 'support@nidal.ee'
+
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(email)
+      } else {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea')
+        textArea.value = email
+        document.body.appendChild(textArea)
+        textArea.focus()
+        textArea.select()
+        document.execCommand('copy')
+        document.body.removeChild(textArea)
+      }
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch (err) {
+      console.error('Failed to copy email: ', err)
+    }
   }
 
   useEffect(() => {
@@ -30,6 +47,7 @@ export default function Home() {
     }, 1000)
     return () => clearInterval(interval)
   }, [])
+
 
   return (
     <main className="min-h-screen bg-[#f5f5f5] flex flex-col">
@@ -112,13 +130,15 @@ export default function Home() {
             <button 
               onClick={handleCopyEmail}
               className="text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors group flex items-center gap-1 md:gap-2"
+              aria-label="Copy email address"
             >
               CONTACT
               {copied ? (
-                <Check className="w-3 h-3 md:w-4 md:h-4 text-green-600" />
+                <Check className="w-3 h-3 md:w-4 md:h-4 text-green-600" aria-hidden="true" />
               ) : (
-                <Copy className="w-3 h-3 md:w-4 md:h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <Copy className="w-3 h-3 md:w-4 md:h-4 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
               )}
+              <span className="sr-only">{copied ? 'Email copied' : 'Copy email address'}</span>
             </button>
           </nav>
         </div>
