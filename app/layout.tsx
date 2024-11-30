@@ -36,7 +36,12 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Nidalee - Game Account Manager',
     description: 'secure, fast, and elegant account management for LoL & Valorant. built with privacy in mind. ❤️',
-    images: ['/card.jpg'],
+    images: [{
+      url: '/lesscard.jpg',
+      width: 256,
+      height: 256,
+      alt: 'nidalee'
+    }],
   },
 }
 export default function RootLayout({
