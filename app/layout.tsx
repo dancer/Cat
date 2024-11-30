@@ -9,7 +9,7 @@ const righteous = Righteous({
 })
 
 export const metadata = {
-  title: 'nidalee - account manager',
+  title: 'Nidalee - Account Manager',
   description: 'a sleek and secure account manager for League of Legends and Valorant. features encryption, quick launch, and category organization.',
   icons: {
     icon: [
@@ -21,7 +21,7 @@ export const metadata = {
     ],
   },
   openGraph: {
-    title: 'nidalee - account manager',
+    title: 'Nidalee - LoL & Valorant Account Manager',
     description: 'securely manage and launch your League of Legends and Valorant accounts with encryption, quick launch, and advanced organization features.',
     images: [
       {
@@ -34,7 +34,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'nidalee - account manager',
+    title: 'Nidalee - Game Account Manager',
     description: 'secure, fast, and elegant account management for LoL & Valorant. built with privacy in mind. ❤️',
     images: ['/card.jpg'],
   },
