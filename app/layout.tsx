@@ -9,26 +9,23 @@ const righteous = Righteous({
 })
 
 export const metadata = {
-  title: 'nidalee',
-  description: 'download here',
+  title: 'nidalee - account manager',
+  description: 'a sleek and secure account manager for league of legends and valorant. features encryption, quick launch, and category organization.',
   icons: {
     icon: [
       { url: '/favicon.ico' },
-      { url: '/48.png', sizes: '48x48', type: 'image/png' },
-      { url: '/64.png', sizes: '64x64', type: 'image/png' },
-      { url: '/128.png', sizes: '128x128', type: 'image/png' },
-      { url: '/256.png', sizes: '256x256', type: 'image/png' },
+      { url: '/card.jpg', sizes: '48x48', type: 'image/jpg' },
     ],
     apple: [
       { url: '/mac.icns', sizes: '180x180', type: 'image/x-icns' },
     ],
   },
   openGraph: {
-    title: 'nidalee',
-    description: 'download here',
+    title: 'nidalee - account manager',
+    description: 'a sleek and secure account manager for league of legends and valorant. features encryption, quick launch, and category organization.',
     images: [
       {
-        url: '/256.png',
+        url: '/card.jpg',
         width: 256,
         height: 256,
         alt: 'nidalee',
@@ -37,9 +34,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'nidalee',
-    description: 'download here',
-    images: ['/256.png'],
+    title: 'nidalee - account manager',
+    description: 'a sleek and secure account manager for league of legends and valorant. features encryption, quick launch, and category organization.',
+    images: ['/card.jpg'],
   },
 }
 export default function RootLayout({
