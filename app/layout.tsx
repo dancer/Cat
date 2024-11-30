@@ -10,7 +10,7 @@ const righteous = Righteous({
 
 export const metadata = {
   title: 'nidalee - account manager',
-  description: 'a sleek and secure account manager for league of legends and valorant. features encryption, quick launch, and category organization.',
+  description: 'a sleek and secure account manager for League of Legends and Valorant. features encryption, quick launch, and category organization.',
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -22,7 +22,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'nidalee - account manager',
-    description: 'a sleek and secure account manager for league of legends and valorant. features encryption, quick launch, and category organization.',
+    description: 'securely manage and launch your League of Legends and Valorant accounts with encryption, quick launch, and advanced organization features.',
     images: [
       {
         url: '/card.jpg',
@@ -35,7 +35,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'nidalee - account manager',
-    description: 'a sleek and secure account manager for league of legends and valorant. features encryption, quick launch, and category organization.',
+    description: 'secure, fast, and elegant account management for LoL & Valorant. built with privacy in mind. ❤️',
     images: ['/card.jpg'],
   },
 }
