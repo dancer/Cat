@@ -112,7 +112,7 @@ export default function Home() {
               GITHUB
             </Link>
             <Link 
-              href="https://discord.gg/launcher" 
+              href="#" 
               className="text-[10px] md:text-sm tracking-wider text-[#ff4f4f] hover:text-[#ff8f8f] transition-colors"
               target="_blank"
               rel="noopener noreferrer"
