@@ -84,7 +84,7 @@ export default function Home() {
 
         {/* Animated Download Button */}
         <Link 
-          href="https://github.com/dancer/nidalee/releases/latest/download/Nidalee.exe"
+          href="https://github.com/dancer/Nidalee/releases/download/v0.1.0/Nidalee.msi"
           className="group relative px-6 py-3 font-mono text-sm font-medium text-black bg-white rounded-md overflow-hidden transition-all duration-300 ease-out hover:bg-[#ff8f8f] hover:scale-110"
         >
           <span className="relative z-10 flex items-center gap-2">
