@@ -1,5 +1,6 @@
 import './globals.css'
 import { Inter, Righteous } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 
 const inter = Inter({ subsets: ['latin'] })
 const righteous = Righteous({ 
@@ -37,7 +38,7 @@ export const metadata = {
     title: 'Nidalee - Game Account Manager',
     description: 'secure, fast, and elegant account management for LoL & Valorant. built with privacy in mind. ❤️',
     images: [{
-      url: '/lesscard.jpg',
+      url: 'https://nidal.ee/lesscard.jpg',
       width: 256,
       height: 256,
       alt: 'nidalee'
@@ -51,7 +52,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
