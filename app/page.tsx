@@ -54,7 +54,7 @@ export default function Home() {
       {/* Top bar with decorative lines */}
       <div className="w-full px-6 pt-6 flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <div className="text-xs tracking-wider text-neutral-500">v0.1.0</div>
+          <div className="text-xs tracking-wider text-neutral-500">v0.1.1</div>
           <div className="w-12 h-[1px] bg-neutral-300"></div>
         </div>
         <div className="text-xs tracking-wider text-neutral-500">UOU</div>
@@ -84,7 +84,7 @@ export default function Home() {
 
         {/* Animated Download Button */}
         <Link 
-          href="https://github.com/dancer/Nidalee/releases/download/v0.1.0/Nidalee.msi"
+          href="https://github.com/dancer/Nidalee/releases/download/v0.1.1/Nidalee.msi"
           className="group relative px-6 py-3 font-mono text-sm font-medium text-black bg-white rounded-md overflow-hidden transition-all duration-300 ease-out hover:bg-[#ff8f8f] hover:scale-110"
         >
           <span className="relative z-10 flex items-center gap-2">
