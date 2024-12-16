@@ -140,6 +140,12 @@ export default function Home() {
               )}
               <span className="sr-only">{copied ? 'Email copied' : 'Copy email address'}</span>
             </button>
+            <Link 
+              href="/reviews" 
+              className="text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors"
+            >
+              REVIEWS
+            </Link>
           </nav>
         </div>
       </footer>
