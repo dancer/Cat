@@ -1,9 +1,10 @@
 import './globals.css'
 import { Inter, Righteous } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
+import BlurProvider from './components/BlurProvider'
 
 const inter = Inter({ subsets: ['latin'] })
-const righteous = Righteous({ 
+const righteous = Righteous({
   weight: '400',
   subsets: ['latin'],
   display: 'swap',
@@ -45,6 +46,7 @@ export const metadata = {
     }],
   },
 }
+
 export default function RootLayout({
   children,
 }: {
@@ -53,7 +55,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children}
+        <BlurProvider>
+          {children}
+        </BlurProvider>
         <Analytics />
       </body>
     </html>

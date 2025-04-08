@@ -5,7 +5,7 @@ import { Righteous } from 'next/font/google'
 import { Copy, Check, Download } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
-const righteous = Righteous({ 
+const righteous = Righteous({
   weight: '400',
   subsets: ['latin'],
   display: 'swap',
@@ -41,7 +41,7 @@ export default function Home() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setDownloadText(prevText => 
+      setDownloadText(prevText =>
         prevText === 'DOWNLOAD HERE' ? 'DOWNLOAD_HERE' : 'DOWNLOAD HERE'
       )
     }, 1000)
@@ -54,10 +54,22 @@ export default function Home() {
       {/* Top bar with decorative lines */}
       <div className="w-full px-6 pt-6 flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <div className="text-xs tracking-wider text-neutral-500">v0.1.1</div>
+          <div className="text-xs tracking-wider text-neutral-500">v0.1.2</div>
           <div className="w-12 h-[1px] bg-neutral-300"></div>
         </div>
-        <div className="text-xs tracking-wider text-neutral-500">UOU</div>
+        <div className="text-xs tracking-wider text-neutral-500 relative">
+          ANYWHO
+          <div className="absolute left-[calc(100%-48px)] top-[10px]">
+            <img
+              src="/sick.png"
+              alt="decorative"
+              className="w-18 h-20 object-contain origin-top animate-swing"
+              style={{
+                filter: 'brightness(0) saturate(100%) invert(56%) sepia(65%) saturate(5876%) hue-rotate(334deg) brightness(100%) contrast(101%)'
+              }}
+            />
+          </div>
+        </div>
         <div className="flex items-center gap-6">
           <div className="w-12 h-[1px] bg-neutral-300"></div>
           <div className="text-xs tracking-wider text-neutral-500">2024</div>
@@ -68,13 +80,13 @@ export default function Home() {
       <div className="flex-1 flex flex-col items-center justify-center -mt-20">
         {/* Vertical line */}
         <div className="w-[1px] h-24 bg-neutral-300 mb-16"></div>
-        
+
         {/* Logo with mirror effect */}
         <div className="text-center mb-16 relative">
           <h1 className={`text-6xl text-[#ff4f4f] ${righteous.className}`}>
             nidalee.
           </h1>
-          <div 
+          <div
             className={`text-6xl text-[#ff4f4f] opacity-30 transform scale-y-[-1] absolute top-full left-0 right-0 overflow-hidden pt-1 ${righteous.className}`}
             aria-hidden="true"
           >
@@ -83,8 +95,8 @@ export default function Home() {
         </div>
 
         {/* Animated Download Button */}
-        <Link 
-          href="https://github.com/dancer/Nidalee/releases/download/v0.1.1/Nidalee.msi"
+        <Link
+          href="https://github.com/dancer/Nidalee/releases/download/v0.1.2/Nidalee.msi"
           className="group relative px-6 py-3 font-mono text-sm font-medium text-black bg-white rounded-md overflow-hidden transition-all duration-300 ease-out hover:bg-[#ff8f8f] hover:scale-110"
         >
           <span className="relative z-10 flex items-center gap-2">
@@ -103,31 +115,31 @@ export default function Home() {
         <div className="w-full flex flex-col items-center pb-4 mt-16 mb-safe">
           <div className="w-full h-[1px] bg-neutral-300 mb-4"></div>
           <nav className="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-16">
-            <Link 
-              href="https://github.com/dancer/nidalee" 
+            <Link
+              href="https://github.com/dancer/nidalee"
               className="text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
               GITHUB
             </Link>
-            <Link 
-              href="#" 
+            <Link
+              href="#"
               className="text-[10px] md:text-sm tracking-wider text-[#ff4f4f] hover:text-[#ff8f8f] transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
               DISCORD
             </Link>
-            <Link 
-              href="https://ko-fi.com/uoucat" 
+            <Link
+              href="https://ko-fi.com/uoucat"
               className="text-[10px] md:text-sm tracking-wider text-[#ff4f4f] hover:text-[#ff8f8f] transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
               KO-FI
             </Link>
-            <button 
+            <button
               onClick={handleCopyEmail}
               className="text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors group flex items-center gap-1 md:gap-2"
               aria-label="Copy email address"
@@ -140,8 +152,8 @@ export default function Home() {
               )}
               <span className="sr-only">{copied ? 'Email copied' : 'Copy email address'}</span>
             </button>
-            <Link 
-              href="/reviews" 
+            <Link
+              href="/reviews"
               className="text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors"
             >
               REVIEWS
@@ -149,6 +161,23 @@ export default function Home() {
           </nav>
         </div>
       </footer>
+
+      <style jsx>{`
+        @keyframes swing {
+          0% {
+            transform: rotate(10deg);
+          }
+          50% {
+            transform: rotate(-10deg);
+          }
+          100% {
+            transform: rotate(10deg);
+          }
+        }
+        .animate-swing {
+          animation: swing 2s ease-in-out infinite;
+        }
+      `}</style>
     </main>
   )
 }
