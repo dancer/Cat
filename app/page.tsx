@@ -59,16 +59,6 @@ export default function Home() {
         </div>
         <div className="text-xs tracking-wider text-neutral-500 relative">
           ANYWHO
-          <div className="absolute left-[calc(100%-48px)] top-[10px]">
-            <img
-              src="/sick.png"
-              alt="decorative"
-              className="w-18 h-20 object-contain origin-top animate-swing"
-              style={{
-                filter: 'brightness(0) saturate(100%) invert(56%) sepia(65%) saturate(5876%) hue-rotate(334deg) brightness(100%) contrast(101%)'
-              }}
-            />
-          </div>
         </div>
         <div className="flex items-center gap-6">
           <div className="w-12 h-[1px] bg-neutral-300"></div>
