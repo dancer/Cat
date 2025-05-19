@@ -12,6 +12,11 @@ const righteous = Righteous({
   display: 'swap',
 })
 
+/**
+ * Renders the landing page for Nidalee, including branding, download link, product description, and navigation.
+ *
+ * Displays a styled interface with a download button, product features, and navigation links to GitHub, Discord, Ko-fi, contact (with clipboard copy functionality), and reviews.
+ */
 export default function Home() {
   const [copied, setCopied] = useState(false)
   const [downloadText, setDownloadText] = useState('DOWNLOAD HERE')

@@ -12,6 +12,11 @@ const righteous = Righteous({
   display: 'swap',
 })
 
+/**
+ * Displays a styled reviews page with animated review cards, average rating, and navigation links.
+ *
+ * Renders a responsive grid of user reviews, showing each reviewer's name, star rating, and review text. Includes a top bar and footer with navigation links, and displays the total number of reviews and the average rating. Typography is unified using the Righteous Google font, and review cards animate into view using Framer Motion.
+ */
 export default function Reviews() {
   const reviewCount = reviews.length;
   const avgRating = (reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length).toFixed(1);
