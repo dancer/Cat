@@ -18,7 +18,7 @@ export default function Home() {
 
   const handleCopyEmail = async (e: React.MouseEvent) => {
     e.preventDefault()
-    const email = 'support@nidal.ee'
+    const email = 'mail@nidal.ee'
 
     try {
       if (navigator.clipboard && navigator.clipboard.writeText) {
