@@ -86,7 +86,7 @@ export default function Home() {
             className="bg-[#ff4f4f] hover:bg-[#ff3f3f] transition-colors px-8 py-3 flex items-center justify-center gap-2"
           >
             <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
-              <path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
+              <path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z" />
             </svg>
             <span className="text-white font-mono text-xs tracking-widest uppercase font-bold">Download for PC</span>
           </Link>
@@ -116,7 +116,7 @@ export default function Home() {
               GITHUB
             </Link>
             <Link
-              href="#"
+              href="https://discord.gg/website"
               className="text-[10px] md:text-sm tracking-wider text-[#ff4f4f] hover:text-[#ff8f8f] transition-colors"
               target="_blank"
               rel="noopener noreferrer"
@@ -124,7 +124,7 @@ export default function Home() {
               DISCORD
             </Link>
             <Link
-              href="https://ko-fi.com/uoucat"
+              href="https://ko-fi.com/nida"
               className="text-[10px] md:text-sm tracking-wider text-[#ff4f4f] hover:text-[#ff8f8f] transition-colors"
               target="_blank"
               rel="noopener noreferrer"
