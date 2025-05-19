@@ -80,19 +80,25 @@ export default function Home() {
           </div>
         </div>
 
-        <Link
-          href="https://github.com/dancer/Nidalee/releases/download/v0.1.2/Nidalee.msi"
-          className="group relative px-6 py-3 font-mono text-sm font-medium text-black bg-white rounded-md overflow-hidden transition-all duration-300 ease-out hover:bg-[#ff8f8f] hover:scale-110"
-        >
-          <span className="relative z-10 flex items-center gap-2">
-            <Download className="w-4 h-4" />
-            {downloadText}
-          </span>
-          <span className="absolute inset-0 z-0 bg-gradient-to-r from-[#ffcfcf] to-[#ff8f8f] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-          <span className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-[#ff4f4f] rounded-full blur-3xl"></span>
-          </span>
-        </Link>
+        <div className="flex flex-col sm:flex-row gap-3 w-full max-w-md px-4">
+          <Link
+            href="https://github.com/dancer/Nidalee/releases/download/v0.1.2/Nidalee.msi"
+            className="flex-1 bg-[#ff4f4f] hover:bg-[#ff3f3f] transition-colors px-6 py-3 flex items-center justify-center gap-2"
+          >
+            <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            <span className="text-white font-mono text-xs tracking-widest uppercase font-bold">Download for PC</span>
+          </Link>
+          <div
+            className="flex-1 bg-neutral-400 px-6 py-3 flex items-center justify-center gap-2 cursor-not-allowed"
+          >
+            <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
+              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm4-8c0 2.2-1.8 4-4 4s-4-1.8-4-4 1.8-4 4-4 4 1.8 4 4z"/>
+            </svg>
+            <span className="text-white font-mono text-xs tracking-widest uppercase font-bold">Mac Version Soon</span>
+          </div>
+        </div>
 
         <div className="mt-6 flex flex-col items-center gap-1">
           <p className="text-[10px] md:text-xs tracking-wider text-neutral-500 uppercase">
