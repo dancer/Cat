@@ -68,12 +68,12 @@ export default function Home() {
         <div className="w-[1px] h-24 bg-neutral-300 mb-16"></div>
 
         {/* Logo with mirror effect */}
-        <div className="text-center mb-16 relative">
-          <h1 className={`text-6xl text-[#ff4f4f] ${righteous.className}`}>
+        <div className="text-center mb-24 relative">
+          <h1 className={`text-8xl text-[#ff4f4f] ${righteous.className}`}>
             nidalee.
           </h1>
           <div
-            className={`text-6xl text-[#ff4f4f] opacity-30 transform scale-y-[-1] absolute top-full left-0 right-0 overflow-hidden pt-1 ${righteous.className}`}
+            className={`text-8xl text-[#ff4f4f] opacity-30 transform scale-y-[-1] absolute top-full left-0 right-0 overflow-hidden pt-1 ${righteous.className}`}
             aria-hidden="true"
           >
             nidalee.
