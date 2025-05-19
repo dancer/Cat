@@ -27,9 +27,9 @@ export const metadata = {
     description: 'securely manage and launch your League of Legends and Valorant accounts with encryption, quick launch, and advanced organization features.',
     images: [
       {
-        url: '/card.jpg',
-        width: 256,
-        height: 256,
+        url: '/nidalee.png',
+        width: 1200,
+        height: 630,
         alt: 'nidalee',
       }
     ],
@@ -39,9 +39,9 @@ export const metadata = {
     title: 'Nidalee - Game Account Manager',
     description: 'secure, fast, and elegant account management for LoL & Valorant. built with privacy in mind. ❤️',
     images: [{
-      url: 'https://nidal.ee/lesscard.jpg',
-      width: 256,
-      height: 256,
+      url: 'https://nidal.ee/nidalee.png',
+      width: 1200,
+      height: 630,
       alt: 'nidalee'
     }],
   },
