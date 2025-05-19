@@ -6,20 +6,31 @@ import { Star } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export default function Reviews() {
+  const reviewCount = reviews.length;
+  const avgRating = (reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length).toFixed(1);
   return (
-    <main className="min-h-screen bg-[#f5f5f5] flex flex-col">
+    <main className="min-h-screen bg-[#f5f5f5] flex flex-col select-none">
       {/* Top bar with decorative lines */}
       <div className="w-full px-6 pt-6 flex items-center justify-between">
-        <div className="flex items-center gap-6">
-          <Link href="/" className="text-xs tracking-wider text-neutral-500 hover:text-neutral-900 transition-colors">
-            BACK
-          </Link>
-          <div className="w-12 h-[1px] bg-neutral-300"></div>
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center gap-6">
+            <Link href="/" className="text-xs tracking-wider text-neutral-500 hover:text-neutral-900 transition-colors">
+              BACK
+            </Link>
+            <div className="w-12 h-[1px] bg-neutral-300"></div>
+          </div>
+          <div className="text-xs tracking-wider text-neutral-500">{reviewCount} REVIEWS</div>
         </div>
         <div className="text-xs tracking-wider text-neutral-500">REVIEWS</div>
-        <div className="flex items-center gap-6">
-          <div className="w-12 h-[1px] bg-neutral-300"></div>
-          <div className="text-xs tracking-wider text-neutral-500">2024</div>
+        <div className="flex flex-col items-end gap-2">
+          <div className="flex items-center gap-6">
+            <div className="w-12 h-[1px] bg-neutral-300"></div>
+            <div className="text-xs tracking-wider text-neutral-500">2024</div>
+          </div>
+          <div className="flex items-center gap-2">
+            <Star className="w-3 h-3 text-[#ff4f4f] fill-[#ff4f4f]" />
+            <div className="text-xs tracking-wider text-neutral-500">{avgRating}</div>
+          </div>
         </div>
       </div>
 

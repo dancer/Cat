@@ -41,17 +41,12 @@ export default function Home() {
   }
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setDownloadText(prevText =>
-        prevText === 'DOWNLOAD HERE' ? 'DOWNLOAD_HERE' : 'DOWNLOAD HERE'
-      )
-    }, 1000)
-    return () => clearInterval(interval)
+    setDownloadText('DOWNLOAD_HERE')
   }, [])
 
 
   return (
-    <main className="min-h-screen bg-[#f5f5f5] flex flex-col">
+    <main className="min-h-screen bg-[#f5f5f5] flex flex-col select-none">
       {/* Top bar with decorative lines */}
       <div className="w-full px-6 pt-6 flex items-center justify-between">
         <div className="flex items-center gap-6">
@@ -85,7 +80,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Animated Download Button */}
         <Link
           href="https://github.com/dancer/Nidalee/releases/download/v0.1.2/Nidalee.msi"
           className="group relative px-6 py-3 font-mono text-sm font-medium text-black bg-white rounded-md overflow-hidden transition-all duration-300 ease-out hover:bg-[#ff8f8f] hover:scale-110"
