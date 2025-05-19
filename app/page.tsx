@@ -82,7 +82,7 @@ export default function Home() {
 
         <div className="flex justify-center w-full px-4">
           <Link
-            href="https://github.com/dancer/Nidalee/releases/download/v0.1.3/Nidalee0.1.3.msi"
+            href="https://github.com/dancer/Nidalee/releases/download/v0.1.3/Nidalee_0.1.3.msi"
             className={`bg-[#ff4f4f] hover:bg-[#ff3f3f] transition-colors px-8 py-3 flex items-center justify-center gap-2 shadow-md rounded ${righteous.className}`}
           >
             <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
