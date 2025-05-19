@@ -13,7 +13,11 @@ const righteous = Righteous({
 export const metadata = {
   title: 'Nidalee - Account Manager',
   description: 'a sleek and secure account manager for League of Legends and Valorant. features encryption, quick launch, and category organization.',
-  themeColor: '#ff4f4f',
+  themeColor: '#EF4444',
+  other: {
+    "theme-color": "#EF4444",
+    "msapplication-TileColor": "#EF4444"
+  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
