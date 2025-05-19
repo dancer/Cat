@@ -50,7 +50,7 @@ export default function Home() {
       {/* Top bar with decorative lines */}
       <div className="w-full px-6 pt-6 flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <div className="text-xs tracking-wider text-neutral-500">v0.1.2</div>
+          <div className={`text-xs tracking-wider text-neutral-500 ${righteous.className}`}>v0.1.2</div>
           <div className="w-12 h-[1px] bg-neutral-300"></div>
         </div>
         <div className="flex items-center">
@@ -58,7 +58,7 @@ export default function Home() {
         </div>
         <div className="flex items-center gap-6">
           <div className="w-12 h-[1px] bg-neutral-300"></div>
-          <div className="text-xs tracking-wider text-neutral-500">2024</div>
+          <div className={`text-xs tracking-wider text-neutral-500 ${righteous.className}`}>2024</div>
         </div>
       </div>
 
@@ -83,20 +83,20 @@ export default function Home() {
         <div className="flex justify-center w-full px-4">
           <Link
             href="https://github.com/dancer/Nidalee/releases/download/v0.1.2/Nidalee.msi"
-            className="bg-[#ff4f4f] hover:bg-[#ff3f3f] transition-colors px-8 py-3 flex items-center justify-center gap-2"
+            className={`bg-[#ff4f4f] hover:bg-[#ff3f3f] transition-colors px-8 py-3 flex items-center justify-center gap-2 shadow-md ${righteous.className}`}
           >
             <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
               <path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z" />
             </svg>
-            <span className="text-white font-mono text-xs tracking-widest uppercase font-bold">Download for PC</span>
+            <span className="text-white text-sm tracking-wider uppercase">Download for PC</span>
           </Link>
         </div>
 
         <div className="mt-6 flex flex-col items-center gap-1">
-          <p className="text-[10px] md:text-xs tracking-wider text-neutral-500 uppercase">
+          <p className={`text-[10px] md:text-xs tracking-wider text-neutral-500 uppercase ${righteous.className}`}>
             Secure account manager for League of Legends and Valorant
           </p>
-          <p className="text-[10px] md:text-xs tracking-wider text-[#ff4f4f] uppercase">
+          <p className={`text-[10px] md:text-xs tracking-wider text-[#ff4f4f] uppercase ${righteous.className}`}>
             Encryption • Quick Launch • Category Organization
           </p>
         </div>
@@ -109,7 +109,7 @@ export default function Home() {
           <nav className="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-16">
             <Link
               href="https://github.com/dancer/nidalee"
-              className="text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors"
+              className={`text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors ${righteous.className}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -117,7 +117,7 @@ export default function Home() {
             </Link>
             <Link
               href="https://discord.gg/website"
-              className="text-[10px] md:text-sm tracking-wider text-[#ff4f4f] hover:text-[#ff8f8f] transition-colors"
+              className={`text-[10px] md:text-sm tracking-wider text-[#ff4f4f] hover:text-[#ff8f8f] transition-colors ${righteous.className}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -125,7 +125,7 @@ export default function Home() {
             </Link>
             <Link
               href="https://ko-fi.com/nida"
-              className="text-[10px] md:text-sm tracking-wider text-[#ff4f4f] hover:text-[#ff8f8f] transition-colors"
+              className={`text-[10px] md:text-sm tracking-wider text-[#ff4f4f] hover:text-[#ff8f8f] transition-colors ${righteous.className}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -133,7 +133,7 @@ export default function Home() {
             </Link>
             <button
               onClick={handleCopyEmail}
-              className="text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors group flex items-center gap-1 md:gap-2"
+              className={`text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors group flex items-center gap-1 md:gap-2 ${righteous.className}`}
               aria-label="Copy email address"
             >
               CONTACT
@@ -146,7 +146,7 @@ export default function Home() {
             </button>
             <Link
               href="/reviews"
-              className="text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors"
+              className={`text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors ${righteous.className}`}
             >
               REVIEWS
             </Link>
