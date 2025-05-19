@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Righteous } from 'next/font/google'
 import { Copy, Check, Download } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 const righteous = Righteous({
   weight: '400',
@@ -57,8 +58,8 @@ export default function Home() {
           <div className="text-xs tracking-wider text-neutral-500">v0.1.2</div>
           <div className="w-12 h-[1px] bg-neutral-300"></div>
         </div>
-        <div className="text-xs tracking-wider text-neutral-500 relative">
-          ANYWHO
+        <div className="flex items-center">
+          <Image src="/48.png" alt="Logo icon" width={24} height={24} className="w-6 h-6" />
         </div>
         <div className="flex items-center gap-6">
           <div className="w-12 h-[1px] bg-neutral-300"></div>
