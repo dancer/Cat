@@ -63,7 +63,7 @@ export default function Home() {
       </div>
 
       {/* Center content */}
-      <div className="flex-1 flex flex-col items-center justify-center -mt-20">
+      <div className="flex-1 flex flex-col items-center justify-center -mt-32">
         {/* Vertical line */}
         <div className="w-[1px] h-24 bg-neutral-300 mb-16"></div>
 
@@ -93,6 +93,15 @@ export default function Home() {
             <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-[#ff4f4f] rounded-full blur-3xl"></span>
           </span>
         </Link>
+
+        <div className="mt-6 flex flex-col items-center gap-1">
+          <p className="text-[10px] md:text-xs tracking-wider text-neutral-500 uppercase">
+            Secure account manager for League of Legends and Valorant
+          </p>
+          <p className="text-[10px] md:text-xs tracking-wider text-[#ff4f4f] uppercase">
+            Encryption • Quick Launch • Category Organization
+          </p>
+        </div>
       </div>
 
       {/* Navigation */}
