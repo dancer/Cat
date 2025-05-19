@@ -131,6 +131,18 @@ export default function Home() {
             >
               KO-FI
             </Link>
+            <Link
+              href="/privacy"
+              className={`text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors ${righteous.className}`}
+            >
+              PRIVACY
+            </Link>
+            <Link
+              href="/tos"
+              className={`text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors ${righteous.className}`}
+            >
+              TERMS
+            </Link>
             <button
               onClick={handleCopyEmail}
               className={`text-[10px] md:text-sm tracking-wider text-neutral-600 hover:text-neutral-900 transition-colors group flex items-center gap-1 md:gap-2 ${righteous.className}`}
