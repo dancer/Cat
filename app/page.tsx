@@ -50,7 +50,7 @@ export default function Home() {
       {/* Top bar with decorative lines */}
       <div className="w-full px-6 pt-6 flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <div className={`text-xs tracking-wider text-neutral-500 ${righteous.className}`}>v0.1.2</div>
+          <div className={`text-xs tracking-wider text-neutral-500 ${righteous.className}`}>v0.1.3</div>
           <div className="w-12 h-[1px] bg-neutral-300"></div>
         </div>
         <div className="flex items-center">
